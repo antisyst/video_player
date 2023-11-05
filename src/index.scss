@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+button {
+  cursor: pointer;
+}
+img, video {
+  user-select: none;
+}
+img {
+  pointer-events: none;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  padding: 20px;
+}
+.controls {
+  display: flex;
+  z-index: 1000;
+  flex-direction: row;
+  padding: 30px;
+  align-items: center;
+  gap: 0 10px;
+
+  button {
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 13px 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+
+    svg {
+    transition: all 0.3s ease-out;
+    &:active {
+      transform: scale(1.2);
+    }
+    }
+  }
+}
+input {
+  outline: none;
+  padding: 13px 15px;
+  width: 300px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  border: 2px solid #000;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.asset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 470px;
+  height: auto;
+  justify-content: center;
+  cursor: -webkit-grab;
+  cursor: grab;
+
+  
+  video {
+    width: 100%;
+    height: auto;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 50%;
+    border: none;
+    justify-content: center;
+    }
+
+  .main_action_button {
+    position: absolute;
+    z-index: 100;
+    font-size: 24px;
+  }
+  .delete_button {
+    position: absolute;
+    z-index: 100;
+    font-size: 20px;
+    right: 10px;
+    top: 10px;
+  }
+}
+.asset_info {
+  padding: 20px;
+}
